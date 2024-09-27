@@ -1,6 +1,6 @@
-.parent{display: flex;
+.parent{display: grid;
 justify-content: space-between;}
-nav{display: flex;
+nav{display: grid;
 justify-content: space-around; 
 gap: 20px;
 text-align: center;
@@ -24,12 +24,15 @@ background-color: #6c757d;
 
 }
 
-@media(max-width:768px) {
-    img { width: 100%; 
-        max-width: 200px;}
-}
 
-@media(max-width:480px) {
-    img { width: 100%; 
-        max-width: 100px;}
+
+
+@media (min-width:10px)(max-width:480px) {
+    .mix {display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media(min-width:1024px) and (max-width:1440px) {
+    .mix {display: grid;
+    grid-template-columns: repeat(3,1fr);}
 }
